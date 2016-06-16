@@ -2,15 +2,16 @@ Construindo Modelo de Domínio
 =============================
 
 Bem vindo ao Behat! Behat é uma ferramenta para fechar o laço de comunicação do 
-`Desenvolvimento Dirigido por Comportamento-BDD`. BDD é uma metodologia de 
-desenvolvimento de software baseado em exemplo por meio da comunicação contínua 
-entre desenvolvedores e a área de negócios que esta aplicação suporta. Esta 
-comunicação acontece de uma forma que a área de negócios e os desenvolvedores 
-podem claramente entender - exemplos. Exemplos são estruturados entorno do padrão
-``Contexto-Ação-Resultado`` e são escritos em um formato especial chamado *Gherkin*.
-O fato do Guerkin ser muito estrutural torna muito fácil automatizar testes de 
-comportamento contra uma aplicação em desenvolvimento. Exemplos 
-automatizados são utilizados atualmente para guiar o desenvolvimento de aplicações TDD-style.
+`Desenvolvimento Dirigido por Comportamento (BDD)`. 
+BDD é uma metodologia de desenvolvimento de software baseado em exemplo por 
+meio da comunicação contínua entre desenvolvedores e a área de negócios que 
+esta aplicação suporta. Esta comunicação acontece de uma forma que a área 
+de negócios e os desenvolvedores podem claramente entender - exemplos. 
+Exemplos são estruturados entorno do padrão ``Contexto-Ação-Resultado`` 
+e são escritos em um formato especial chamado *Gherkin*. O fato do Guerkin 
+ser muito estrutural torna muito fácil automatizar testes de comportamento 
+contra uma aplicação em desenvolvimento. Exemplos automatizados são 
+utilizados atualmente para guiar o desenvolvimento de aplicações TDD-style.
 
 Exemplo
 -------
@@ -700,7 +701,7 @@ What's Next?
 ------------
 
 Parabéns! Você agora conhece tudo o que precisa para começar com o desenvolvimento
-dirigido por testes e Behat. Daqui, vocẽ pode aprender mais sobre a sintaxe :doc: `Gherkin </guides/1.gherkin>`
+dirigido por testes e Behat. Daqui, vocẽ pode aprender mais sobre a sintaxe :doc:`Gherkin </guides/1.gherkin>`
 ou aprender como testar suas aplicações web usando Behat com Mink.
 
 .. _`Behavior Driven Development`: https://pt.wikipedia.org/wiki/Behavior_Driven_Development
