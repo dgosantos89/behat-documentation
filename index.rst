@@ -2,11 +2,11 @@ Documentação do Behat
 =====================
 
 Behat é um framework open source de Behavior Driven Development (BDD - Desenvolvimento Dirigido por Comportamento) para PHP 5.3+.
-O que é * Behavior Driven Development *, você pergunta? É uma maneira de desenvolver software
+O que é *Behavior Driven Development*, você pergunta? É uma maneira de desenvolver software
 através de uma comunicação constante com as partes interessadas em forma de exemplos;
 exemplos de como este programa deve ajudá-los, e você, para alcançar seus objetivos.
 
-Por exemplo, imagine que você está prestes a criar o famoso comando UNIX `` ls``.
+Por exemplo, imagine que você está prestes a criar o famoso comando UNIX ``ls``.
 Antes de começar, você vai ter uma conversa com seus stakeholders (usuários de UNIX) e eles poderiam dizer que mesmo que eles gostem muito do UNIX, eles precisam de uma maneira de ver todos os arquivos no diretório de trabalho atual. Você então tem um bate-papo vai-e-vem com eles sobre como eles vêem esta característica trabalhando e que você venha com o seu primeiro cenário (um nome alternativo, por exemplo, na metodologia BDD):
 
 .. code-block:: gherkin
