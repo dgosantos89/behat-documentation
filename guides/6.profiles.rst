@@ -17,7 +17,7 @@ com a opção ``--config``:
     $ behat --config custom-config.yml
 
 Todos os parâmetros de configuração neste arquivo são definidos sob um perfil 
-com nome root (``default:`` for example). Um perfil é justamente um nome 
+com nome root (``default:`` por exemplo). Um perfil é justamente um nome 
 customizado que você pode usar para mudar rapidamente as configurações de 
 teste utilizando a opção ``--profile`` quando executar a sua suite de 
 funcionalidade.
