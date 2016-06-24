@@ -2,28 +2,28 @@ Escrevendo Features
 ===================
 
 Behat é uma ferramenta para testar o o comportamento
-de seua aplicação, escrito em uma linguagem especial
-chamada Gherkin. Gherkin é uma `Business Readable, Domain Specific Language <http://martinfowler.com/bliki/BusinessReadableDSL.html>`_ creada especificamente
+de sua aplicação, utilizando uma linguagem especial
+chamada Gherkin. Gherkin é uma `Business Readable, Domain Specific Language <http://martinfowler.com/bliki/BusinessReadableDSL.html>`_ criada especificamente
 para a descrição de comportamentos. Isto lhe dá a habilidade
 de remover detalhes lógicos dos testes de comportamento.
 
-Gherkin serve como documentação do seu projeto, bem como
-para testes automatizados. Behat também tem uma característica
-bonus: Ele fala para você usando linguagem verdadeira, humana 
-dizendo a você o código que você deve escrever.
+O Gherkin serve como documentação do seu projeto, bem como
+para testes automatizados. O Behat também tem uma característica
+bônus: Ele fala para você usando linguagem verdadeira, humana 
+lhe dizendo o código que você deve escrever.
 
     Dica:
 
     Se você ainda é novo no Behat, vá para :doc:`/quick_intro_pt1` 
-    primeiro,então retorne aqui para aprender mais sobre Gherkin.
+    primeiro e então retorne aqui para aprender mais sobre Gherkin.
 
 Sintaxe Gherkin
 ---------------
 
-Bem como UAML e Python, Gherkin é uma linguagem orientada a espaços, ela
-usa identação para definir a estrutura. Os fins de linha encerram as 
-declarações (denominados steps) e espaços ou tabs também podem ser usados
-para identação (nós sugerimos a você usar espaços para portabilidade).
+Bem como YAML e Python, Gherkin é uma linguagem orientada a espaços, ela
+usa indentação para definir a estrutura. Os fins de linha encerram as 
+declarações (denominados etapas) e espaços ou tabs também podem ser usados
+para indentação (nós sugerimos a você usar espaços para melhor portabilidade).
 Finalmente, a maioria das linhas em Gherkin iniciam com uma palavra
 chave especial:
 
@@ -39,8 +39,8 @@ chave especial:
  
       Cenário: Uma determinada situação de negócios
         Dado uma pré condição
-        E uma outra pŕe condição
-        Quando uma ação feita pelo ator
+        E uma outra pré condição
+        Quando uma ação é feita pelo ator
         E uma outra ação
         E outra ação diferente
         Então um resultado testável é alcançado
@@ -49,49 +49,48 @@ chave especial:
       Cenário: Uma situação diferente
         ...
 
-O analizador divide a entrada em funcionalidades, cenários e etapas.
-Vamos analizar o exemplo:
+O analisador divide a entrada em funcionalidades, cenários e etapas.
+Vamos analisar o exemplo:
 
 .# ``Funcionalidade: Algum texto descritivo conciso do que é desejado`` 
-    inicia a feature e lhe dá um título. Aprenda mais sobre funcionalidades
+    inicia a feature e lhe dá um título. Aprenda mais sobre Funcionalidades
     na seção "`Features`_".
 
 .# As próximas três linhas (``A fim de ...``, ``Como um ...``, ``Eu quero...``)
-    dão um contexto fornecem um contexto para as pessoas que lêem o seu recurso 
-    e descreve o valor do negócio derivada da inclusão do recurso em seu software.
+    dão um contexto para as pessoas que leem a sua funcionalidade e  descreve
+    o valor do negócio derivada da inclusão da funcionalidade em seu software.
     Estas linhas não são analisadas pelo Behat e não requerem uma estrutura.
     
 .# ``Cenário: Uma determinada situação de negócios`` inicia o cenário e
     contêm uma descrição do cenário. Aprenda mais sobre cenários na seção 
     "`Scenarios`_" 
     
-.# As próximas 7 linhas são etapas do cenário, cada um dos quais é comparado
+.# As próximas 7 linhas são etapas do cenário, cada uma das quais é comparada
     com um padrão definido em outro lugar. Aprenda mais sobre etapas na
     seção "`Steps`_"
 
-.# ``Cenário: Uma situação diferente`` inicia o próximo e cenário assim por diante.
+.# ``Cenário: Uma situação diferente`` inicia o próximo cenário e assim por diante.
 
-Quando você está executando a funcionalidade, a porção da direita de cada passo
+Quando você está executando a funcionalidade, a porção da direita de cada etapa
 (após as palavras chaves como ``Dado``, ``E``, ``Quando``, etc) coincide com 
 um padrão, que executa uma função callback do PHP. Você pode ler mais sobre 
-etapas de coincidencias e execução em :doc:`/guides/2.definitions`.
+etapas de coincidências e execução em :doc:`/guides/2.definitions`.
 
 Funcionalidades
 ---------------
 
 Todos arquivos ``*.feature`` convencionalmente consistem em uma funcionalidade 
-única. Linhas iniciando com a palavra chave ``Funcionalidade:`` (ou o seu 
-equivalente) seguido de três linhas identadas iniciam uma funcionalidade. 
-Usualmente uma feature contém uma lista de cenários. Você pode escrever 
-qualquer coisa que você precise até o primeiro cenário, que inicia com 
-``Cenário:`` (ou o seu equivalente) em uma nova linha. Você pode usar
-`tags`_ para agrupar funcionalidades e cenários, independente da estrutura
-do seu arquivo e diretório.
+única. Linhas iniciando com a palavra chave ``Funcionalidade:`` seguido de 
+três linhas identadas iniciam uma funcionalidade. 
+Usualmente uma Funcionalidade contém uma lista de Cenários. 
+Você pode escrever qualquer coisa que você precise até o primeiro cenário, 
+que inicia com ``Cenário:`` (ou o seu equivalente) em uma nova linha. 
+Você pode usar `tags`_ para agrupar Funcionalidades e Cenários, 
+independente da estrutura do seu arquivo e diretório.
 
 Todos cenários consistem em uma lista de `etapas`_, que devem iniciar com
-uma das palvras chaves ``Dado``, ``Quando``, ``Então``, ``Mas`` ou ``E``
-(ou o equivalente de um destes). O Behat trata eles do mesmo modo, mas
-você não deve fazer isto.
+uma das palavras chaves ``Dado``, ``Quando``, ``Então``, ``Mas`` ou ``E``. 
+O Behat trata eles do mesmo modo, mas você não deve fazer isto.
 Aqui temos um exemplo:
 
 .. code-block:: gherkin
@@ -103,21 +102,21 @@ Aqui temos um exemplo:
         comprar café a todo momento
 
       Cenário: Compra último café
-        Dado que tenha 1 café sobrando na máuqina
+        Dado que tenha 1 café sobrando na máquina
         E eu tenha depositado 1 real
         Quando eu pressionar o botão de café
         Então eu deveria ser servido de um café
 
-Além do básico `Cenário`_, uma feature pode conter `Esquema do Cenário`_
-e `Contexto`_.
+Além do básico `Cenário`_, uma funcionalidade pode conter 
+`Esquema do Cenário`_ e `Contexto`_.
 
 Cenário
 -------
 
 Cenários são uma das principais estruturas do Gherkin. Todo cenário deve 
-iniciar com a palavra chave ``Cenário:`` (ou palavra chave equivalente),
-opcionalmente seguido de um título de cenário. Cada funcionalidade pode 
-ter um ou mais cenários e todo cenário consiste em um ou mais `etapa`_.
+iniciar com a palavra chave ``Cenário:`` , opcionalmente 
+seguido de um título de cenário. Cada funcionalidade pode 
+ter um ou mais cenários e todo cenário consiste em uma ou mais `etapa`_.
 
 Os cenários seguintes tem cada um 3 etapas:
 
@@ -148,12 +147,12 @@ tedioso e repetitivo:
 
     Cenário: Comer 5 em cada 12
       Dado que tenho 12 pepinos
-      Quando eu comer 5 peninos
+      Quando eu comer 5 pepinos
       Então eu devo ter 7 pepinos
 
     Cenário: Comer 5 em cada 20
       Dado que tenho 20 pepinos
-      Quando eu comer 5 peninos
+      Quando eu comer 5 pepinos
       Então eu devo ter 15 pepinos    
 
 Os `Esquemas do Cenários` nos permitem formular estes exemplos com maior precisão 
@@ -183,16 +182,16 @@ contidos ``< >`` nas etapas de saída do Cenário. Por exemplo:
 
     Dado <Eu sou um espaço reservado e estou ok>
 
-Pense em um espaço reservado como uma variável. Isto pode ser substituido
+Pense em um espaço reservado como uma variável. Isto pode ser substituído
 por um valor real das linhas da tabela de ``Exemplos:``, onde o texto 
-entre o ângulo de espaço em reservado corresponde ao que o cabeçalho da
-coluna da tabela. O valor substituido pelo espaço reservado muda a cada 
+entre os ``< >``  de espaço reservado corresponde ao cabeçalho da
+coluna da tabela. O valor substituído pelo espaço reservado muda a cada 
 execução subsequente do Esquema do Cenário, até que o fim da tabela de
 ``Exemplos`` seja alcançado.
 
 .. tip::
 
-    Vocẽ também pode usar os espaços reservados em `Argumentos 
+    Você também pode usar os espaços reservados em `Argumentos 
     Multilineos`_.
 
 .. note::
@@ -219,11 +218,11 @@ O cenário que realmente é executado é:
 .. code-block:: gherkin
 
     Cenário: Comer
-      # <antes> é substituido por 12:
+      # <antes> é substituído por 12:
       Dado que temos 12 pepinos
-      # <come> é substituido por 5:
+      # <come> é substituído por 5:
       Quando eu comer 5 pepino
-      # <depois> é substituido por 7:
+      # <depois> é substituído por 7:
       Então teremos 7 pepinos
 
 Contexto
@@ -232,7 +231,7 @@ Contexto
 Contexto permite a você adicionar algum contexto a todos os cenários em 
 um único recurso. Um Contexto é como um Cenário sem título, que contém
 uma série de etapas. A diferença ocorre quando ele é executado: o 
-contexto está executando *antes de cada* um de seus cenários, mas depois 
+contexto será executado *antes de cada* um de seus cenários, mas depois 
 dos seus hooks ``BeforeScenario`` (:doc:`/guides/3.hooks`).
 
 .. code-block:: gherkin
@@ -244,7 +243,7 @@ dos seus hooks ``BeforeScenario`` (:doc:`/guides/3.hooks`).
         Dado um administrador global chamado "Greg"
         E um blog chamado "Greg esbraveja contra impostos"
         E um cliente chamado "Wilson"
-        E um blog chamado "Terapia Cara" de própriedade de "Wilson"
+        E um blog chamado "Terapia Cara" de propriedade de "Wilson"
     
     Cenário: Wilson posta em seu próprio blog
         Dado que eu esteja logado como Wilson
@@ -260,11 +259,11 @@ dos seus hooks ``BeforeScenario`` (:doc:`/guides/3.hooks`).
 Etapas
 ------
 
-`Funcionalidades`_ consiste em etapas, também conhecido como `Dado`_, `Quando`_ e `Então`_.
+`Funcionalidades`_ consistem em etapas, também conhecidas como `Dado`_, `Quando`_ e `Então`_.
 
-O Behat não tem uma distinção técnica entre estes três tipos de etapas.
-Contudo, nós recomendamos fortemente que você faça! Estas palavras
-foram cuidadosamente selecionadas para o seus propósito e você deve
+O Behat não faz distinção técnica entre estes três tipos de etapas, 
+contudo, nós recomendamos fortemente que você faça! Estas palavras
+foram cuidadosamente selecionadas para o seu propósito e você deve
 saber que o objetivo é entrar na mentalidade BDD.
 
 Robert C. Martin escreveu um 
@@ -276,15 +275,13 @@ Dado
 ~~~~
 
 O propósito da etapa **Dado** é **colocar o sistema em um estado conhecido** 
-antes do usuário (ou sistema externo) iniciar a interalção com o sistema
+antes do usuário (ou sistema externo) iniciar a interação com o sistema
 (na etapa Quando). Evite falar sobre a interação em Dado. Se você trabalhou
 com casos de uso, Dado é a sua pré condição.
 
 .. sidebar:: Exemplos de Dado
 
     Dois bons exemplos do uso de **Dado** são:
-
-    * Criar 
 
     * Para criar registros (instâncias de modelo) ou de configuração do 
     banco de dados:
@@ -294,10 +291,8 @@ com casos de uso, Dado é a sua pré condição.
           Dado que não tenha usuários no site
           Dado que o banco de dados esteja limpo
 
-    * Autenticar um usuário (uma exceção para )
-
-    * Autenticar um usuário (uma exceção a recomendação não-interação 
-    Coisas que "aconteceram antes" estão ok.):
+    * Autenticar um usuário (uma exceção a recomendação de não-interação 
+    Coisas que "aconteceram antes" estão ok):
 
       .. code-block:: gherkin
 
@@ -306,7 +301,7 @@ com casos de uso, Dado é a sua pré condição.
 .. tip::
 
     Tudo bem chamar a camada de "dentro" da camada de interface do 
-    usuário aqui (em Symfony: falar com os modelos).
+    usuário aqui (no Symfony: falar com os modelos).
 
 .. sidebar:: Usando Dado como massa de dados:
 
@@ -334,7 +329,7 @@ de estado).
     Dois bons exemplos do uso de **Quando** são:
     
     * Interagir com uma página web (a biblioteca Mink lhe dá muitas etapas
-    ``Quando`` web-amigáveis fora da caixa):
+    ``Quando`` web amigáveis):
 
       .. code-block:: gherkin
 
@@ -396,7 +391,7 @@ implementação).
 E, Mas
 ~~~~~~
 
-Se você tem várias etapas Dado, Quando ou Então vocẽ pode escrever:
+Se você tem várias etapas Dado, Quando ou Então você pode escrever:
 
 .. code-block:: gherkin
 
@@ -422,30 +417,28 @@ fluente do seu Cenário:
       Mas eu não verei qualquer outra coisa
 
 O Behat interpreta as etapas iniciando com E ou Mas exatamente como 
-as outras etapas; que não faz distinção entre eles - Mas você deve!
+as outras etapas, não faz distinção entre elas - Mas você deve!
 
 Argumentos Multilineos
 ----------------------
 
-A linha um `etapa`_
+A linha única `etapas`_ permite ao Behat extrair pequenas strings de 
+suas etapas e recebê-los em suas definições de etapas. No entanto, há 
+momentos em que você quer passar uma estrutura de dados mais rica  
+a uma definição de etapa.
 
-A única linha `etapas`_ permite ao Behat extrair pequenas strings de 
-suas etapas e recebê-los em suas step definitions. No entanto, há 
-momentos em que você quer passar uma estrutura de dados mais rica a 
-partir de uma step definition.
-
-Para isto foram porjetados os Argumentos Multilineos. Eles são 
+Para isto foram projetados os Argumentos Multilineos. Eles são 
 escritos nas linhas que seguem imediatamente uma etapa e são passadas 
-para o método step definition como um último argumento.
+para o método definição de etapa como um último argumento.
 
 Etapas de Argumentos Multilineos vem em dois modos: `tabelas`_ ou `pystrings`_.
 
 Tabelas
 ~~~~~~~
 
-As tabelas são etapas de argumentos são úteis para a especificação de
+As tabelas são etapas de argumentos úteis para a especificação de
 um grande conjunto de dados - normalmente como entrada para uma saída 
-de Dado ou como espera de um Então.
+de ``Dado`` ou como espera de um ``Então``.
 
 .. code-block:: gherkin
 
@@ -459,7 +452,7 @@ de Dado ou como espera de um Então.
 .. attention::
 
     Não confunda tabelas com `Esquemas do cenário`_  - sintaticamente 
-    eles são identicos, mas eles tem propósitos diferentes. Esquemas
+    eles são idênticos, mas eles tem propósitos diferentes. Esquemas
     declaram diferentes valores múltiplos ao mesmo cenário, enquanto
     tabelas são usadas para esperar um conjunto de dados.
 
@@ -484,7 +477,7 @@ de Dado ou como espera de um Então.
         }
 
     Uma tabela é injetada na definição do objeto ``TableNode``, com 
-    o qual vocẽ pode obter um hash de colunas (método 
+    o qual você pode obter um hash de colunas (método 
     ``TableNode::getHast()``) ou por linhas 
     (``TableNode::getRowsHash()``).
 
@@ -493,7 +486,7 @@ PyStrings
 
 Strings multilineas (também conhecidas como PyStrings) são úteis 
 para a especificação de um grande pedaço de texto. O texto deve 
-ser compensado por delimitadores que consistem em três marcas de 
+ser fechado por delimitadores que consistem em três marcas de 
 aspas duplas (`` """ ``), colocadas em linha:
 
 .. code-block:: gherkin
@@ -541,11 +534,11 @@ aspas duplas (`` """ ``), colocadas em linha:
 
 .. note::
 
-    A identação para abrir ``"""`` não é importante, apesar de ser uma 
+    A indentação para abrir ``"""`` não é importante, apesar de ser uma 
     prática comum deixar dois espaços da etapa de fechamento. A identação
     dentro das aspas triplas, entretanto, é significante. Cada linha da
-    string passa pela chamada da step definition será re-identada de 
-    acordo com a abertura ``"""``. A identação além da coluna de abertura 
+    string passa pela chamada da definição de etapa e será re-indentada de 
+    acordo com a abertura ``"""``. A indentação além da coluna de abertura 
     ``"""`` por conseguinte, será preservada.
 
 Tags
@@ -577,7 +570,7 @@ apenas separá-los com espaços:
     Se uma tag existe em uma ``Funcionalidade``, o Behat irá atribuir essa 
     tag para todos os ``Cenários`` filhos e ``Esquemas do Cenário`` também.
 
-Gherkin em Muitas Linguagens
+Gherkin em Muitas Línguas
 ----------------------------
 
 O Gherkin está disponível em muitas linguagens, permitindo você escrever 
@@ -585,7 +578,7 @@ histórias usando as palavras chave de sua linguagem. Em outras palavras,
 se você fala Francês, você pode usar a palavra ``Fonctionnalité`` ao invés 
 de ``Funcionalidade``.
 
-Para checar se o Behat e o Gherkin suportam a sua lingua (Francês, por exemplo),
+Para checar se o Behat e o Gherkin suportam a sua língua (Francês, por exemplo),
 execute:
 
 .. code-block:: bash
@@ -604,7 +597,7 @@ execute:
         Fonctionnalité: ...ta
           ...
 
-    Desta forma, suas funcionalidades vão realizar todas as informações sobre 
+    Desta forma, suas funcionalidades realizarão todas as informações sobre o 
     seu tipo de conteúdo, o que é muito importante para metodologias como BDD 
     e também dá ao Behat a capacidade de ter recursos de vários idiomas em 
-    uma suíte.    
+    uma suíte.
