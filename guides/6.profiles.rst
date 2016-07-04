@@ -19,8 +19,8 @@ com a opção ``--config``:
 Todos os parâmetros de configuração neste arquivo são definidos sob um perfil 
 com nome root (``default:`` por exemplo). Um perfil é justamente um nome 
 customizado que você pode usar para mudar rapidamente as configurações de 
-teste utilizando a opção ``--profile`` quando executar a sua suite de 
-funcionalidade.
+teste utilizando a opção ``--profile`` quando executar a sua suíte de 
+funcionalidades.
 
 O perfil padrão sempre é ``default``. Todos os outros perfis herdam parâmetros 
 do perfil ``default``. Se você só precisa de um perfil, defina todos os seus 
@@ -35,7 +35,7 @@ parâmetros sob o ``default:`` root:
 Variável de Ambiente - BEHAT_PARAMS
 -----------------------------------
 
-Se você quiser definir configurações do Behat, utilize a váriavel de 
+Se você quiser definir configurações do Behat, utilize a variável de 
 ambiente ``BEHAT_PARAMS``:
 
 .. code-block:: bash
@@ -55,14 +55,14 @@ projeto (este tem maior prioridade).
 
 .. tip::
 
-    NOTA: No Behat 2.x está variável estava no formato *URL*. Ele foi modificado 
+    NOTA: No Behat 2.x esta variável estava no formato *URL*. Ela foi modificada 
     para utilizar o formato *JSON*.
 
 Filtros Globais
 ---------------
 
-Enquanto é possível especificar filtros em uma parte da configuração da suite, 
-por vezes você irá querer excluir certos cenários através da suite, com a opção 
+Enquanto é possível especificar filtros em uma parte da configuração da suíte, 
+por vezes você irá querer excluir certos cenários através da suíte, com a opção 
 de sobrepor os filtros pela linha de comando.
 
 Isto é conseguido através da especificação de filtros na configuração do `gherkin`:
