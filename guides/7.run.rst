@@ -41,7 +41,7 @@ para imprimir a saída em um arquivo ao invés de ``STDOUT`` com a opção
 
     Alguns formatadores, como ``junit``, sempre requerem a opção especificar 
     a opção ``--out``. O formatador ``junit`` gera um arquivo ``*.xml`` para 
-    cada suite, então precisa de um diretório de destino para colocar estes 
+    cada suíte, então precisa de um diretório de destino para colocar estes 
     arquivos XML.
     
 Você também pode especificar múltiplos formatos para serem usados pelo Behat 
@@ -59,7 +59,7 @@ Mas se você quiser que eles usem diferentes - especifique com ``--out``:
     $ behat -f pretty -o ~/pretty.out -f progress -o std -f junit -o xml
 
 Neste caso, a saída do formatador pretty escreverá no arquivo ``~/pretty.out``, 
-a saída do formatador junit escrever´a no arquivo ``xml`` e o formatador progress 
+a saída do formatador junit escreverá no arquivo ``xml`` e o formatador progress 
 somente imprimira no console.
 
 O Behat tentará identificar arduamente se o seu terminal suporta cores ou não, 
