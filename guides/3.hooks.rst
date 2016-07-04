@@ -4,8 +4,8 @@ Hooking no Processo de Teste
 Você aprendeu :doc:`como escrever definições de etapas </guides/2.definitions>`
 e que com :doc:`Gherkin </guides/1.gherkin>` você pode mover etapas comuns 
 em um bloco de fundo, e fazer suas funcionalidades DRY - Don't repeat 
-yourself (livre de ambiguidades). Mas e se isso não é suficiente? E se 
-você precisar executar algum código antes de toda a suite de teste ou 
+yourself (livre de ambiguidades). Mas e se isso não for suficiente? E se 
+você precisar executar algum código antes de toda a suite de testes ou 
 depois de um cenário específico? Hooks é a salvação:
 
 .. code-block:: php
@@ -23,7 +23,7 @@ depois de um cenário específico? Hooks é a salvação:
          */
          public static function preparar(BeforeSuiteScope $scope)
          {
-             // preparar o sistema para a suite de teste
+             // preparar o sistema para a suite de testes
              // antes de executar isto
          }
 
@@ -37,7 +37,7 @@ depois de um cenário específico? Hooks é a salvação:
          }
     }
 
-Sistema de Hook Behat
+Sistema de Hooks no Behat
 ---------------------
 
 O Behat fornece um número de pontos de hook que nos permitem executar 
@@ -48,7 +48,7 @@ contexto. Não há associação entre o local onde o hook é definido e qual
 nó é executado, mas você pode usar tags ou hooks nomeados se você quiser 
 um controle mais refinado.
 
-Todos os hooks definidos são executados sempre que ações relevantes ocorram. 
+Todos os hooks definidos serão executados sempre que ações relevantes ocorram. 
 A árvore de ações deve ser algo como isto:
 
 .. code-block:: text
@@ -78,7 +78,7 @@ seja, cada exemplo torna-se um cenário real nesta árvore ação.
 Hooks
 -----
 Os Hooks permitem você executar seu código customizado pouco antes ou 
-pouco depois de cada uma destas ações. O Behat permite vocẽ utilizar os 
+pouco depois de cada uma destas ações. O Behat permite você utilizar os 
 seguintes hooks:
 
 #. O hook ``BeforeSuite`` é executado antes que qualquer funcionalidade 
@@ -166,7 +166,7 @@ Aqui estão dois tipos de suite hook disponíveis:
 Hooks de Funcionalidade
 -----------------------
 
-Como as hooks de suite, hooks de funcionalide também são executadas fora 
+Como as hooks de suite, hooks de funcionalidade também são executadas fora 
 do contexto de cenário. Então como uma hook de suite, sua hook de 
 funcionalidade precisa ser definida como método estático em seu contexto:
 
@@ -196,9 +196,9 @@ Hooks de Cenário
 
 Hooks de cenário são disparadas antes ou depois que cada cenário é executado. 
 Estes hooks são executados dentro da inicialização da instância do contexto, 
-assim eles não só poderiam ser instância de métodos de contexto, eles também 
-terão acesso a qualquer propriedade do objeto que você definiu durante o seu 
-cenário:
+assim eles não só poderiam ser uma instância simples de métodos de contexto, 
+eles também terão acesso a qualquer propriedade do objeto que você definiu 
+durante o seu cenário:
 
 .. code-block:: php
 
@@ -222,11 +222,11 @@ Aqui estão dois tipos de hook de cenário disponíveis:
 
 Agora, a parte interessante:
 
-O hook ``@BeforeScenario`` executa não só antes de cada cenário em cada funcionalidade, 
+O hook ``@BeforeScenario`` é executada não só antes de cada cenário em cada funcionalidade, 
 mas antes de **cada linha de exemplo** no esquemas do cenário. Sim, cada linha de exemplo 
 do esquema do cenário trabalha quase do mesmo modo que um cenário comum.
 
-``@AfterScenario`` funcionam exatamente do mesmo modo, sendo executado tanto após 
+``@AfterScenario`` funciona exatamente do mesmo modo, também sendo executado após 
 cenários habituais e exemplos de saída.
 
 Hooks de Etapas
