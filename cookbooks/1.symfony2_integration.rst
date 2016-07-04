@@ -10,7 +10,7 @@ Neste livro de receitas nós cobriremos:
 
 #. Instalando a dependência do Behat com Composer.
 
-#. Inicializando uma suite Behat.
+#. Inicializando uma suíte Behat.
 
 #. Instalando e habilitando a extensão Symfony2.
 
@@ -79,7 +79,7 @@ com o seguinte conteúdo:
 
 Se este arquivo já existe, simplesmente mude o conteúdo adequadamente.
 A partir deste ponto você deve ser capaz de executar o Behat e a extensão Symfony2 
-irá ser carregada e pronta para trabalhar.
+será carregada e estará pronta para trabalhar.
 
 Acessando serviços de aplicações em contextos
 ---------------------------------------------
@@ -105,12 +105,12 @@ construtor ``FeatureContext`` pela injeção do serviço ``session`` no contexto
 Seja cuidadoso porque se tal serviço não existir ou seu nome não corresponder, 
 ele não irá funcionar e você terminará com uma exceção.
 
-Utilizando kernelDriver com sua suite Behat
+Utilizando kernelDriver com sua suíte Behat
 -------------------------------------------
 
-Symfony2 te, uma compilação interna de Cliente de Teste, que pode ajudar você com 
+Symfony2 tem uma compilação interna de Cliente de Teste, que pode ajudar você com 
 o teste de aceite web, porque não o utilizar? 
-Especialmente devido ao Behat tem uma `Extensão Mink <http://mink.behat.org>`_ que 
+Especialmente devido ao Behat ter uma `Extensão Mink <http://mink.behat.org>`_ que 
 faz este tipo de teste ainda mais fácil.
 
 A vantagem de utilizar o KernelDriver ao invés do Mink driver padrão é que você 
