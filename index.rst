@@ -1,7 +1,7 @@
 Documentação do Behat
 =====================
 
-Esta é uma tradução não oficial feita e mantida por `Diego Santos`_, portanto pode estar desatualizada. Sinta-se encorajado para me ajudar a mantê-la atualizada.  
+Esta é uma tradução não oficial feita por `Diego Santos`_, portanto pode estar desatualizada. Sinta-se encorajado para me ajudar a mantê-la atualizada.  
 
 Behat é um framework open source de Behavior Driven Development (BDD - Desenvolvimento Dirigido por Comportamento) para PHP 5.3+.
 O que é *Behavior Driven Development*, você pergunta? É uma maneira de desenvolver software
@@ -86,8 +86,7 @@ Aprenda soluções específicas para necessidades específicas:
 Mais sobre BDD
 --------------
 
-Quando estiver com o Behat instalado e funcionando, você pode aprender mais sobre o BDD através dos seguintes links (em inglês). Embora ambos os tutoriais sejão específicos do Cucumber, Behat
-Though both tutorials are specific to Cucumber, Behat compartilha muito com Cucumber e as filosofias são as mesmas.
+Quando estiver com o Behat instalado e funcionando, você pode aprender mais sobre o BDD através dos seguintes links (em inglês). Embora ambos os tutoriais sejão específicos do Cucumber, Behat compartilha muito com Cucumber e as filosofias são as mesmas.
 
 * `Dan North's "What's in a Story?" <http://dannorth.net/whats-in-a-story/>`_
 * `Cucumber's "Backgrounder" <https://github.com/cucumber/cucumber/wiki/Cucumber-Backgrounder>`_
